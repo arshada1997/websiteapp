@@ -1,0 +1,101 @@
+/* ======================= */
+/*   NAVBAR BASE STYLES    */
+/* ======================= */
+nav.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.dark-nav {
+  background: rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
+}
+
+.logo {
+  width: 140px;
+}
+
+/* ======================= */
+/*     TOGGLE BUTTON       */
+/* ======================= */
+.toggle-btn {
+  width: 35px;
+  cursor: pointer;
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  gap: 6px;
+}
+
+.toggle-btn span {
+  height: 4px;
+  width: 100%;
+  background: #333;
+  border-radius: 3px;
+}
+
+/* ======================= */
+/*     MENU (DESKTOP)      */
+/* ======================= */
+.menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 35px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.btn {
+  padding: 10px 22px;
+  background: white;
+  color: black;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ======================= */
+/*     MOBILE MENU          */
+/* ======================= */
+@media (max-width: 768px) {
+
+  .toggle-btn {
+    display: flex;
+    position: relative;
+    z-index: 2000;
+  }
+
+  .menu {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    width: 220px;
+
+    background: rgba(0, 0, 0, 0.20);   /* MORE TRANSPARENT */
+    backdrop-filter: blur(1px);        /* slight blur behind */
+
+    flex-direction: column;
+    padding: 25px;
+    gap: 20px;
+    border-radius: 20px;
+    list-style: none;
+
+    display: none;
+    transition: 0.3s ease;
+    z-index: 1900;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+}
