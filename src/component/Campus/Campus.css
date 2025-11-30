@@ -14,3 +14,13 @@
     width:23%;
     border-radius: 10px;
 }
+@media(max-width:800px)
+{
+    .gallary{
+        flex-wrap:wrap;
+    }
+    .gallary img{
+        width:47%;
+        margin-bottom: 25px;
+    }
+}
